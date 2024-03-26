@@ -208,6 +208,7 @@ Task("Build").Description("Build git-tfs")
 {
 		MSBuild(PathToSln, settings => {
 		settings.WithTarget("restore");
+		settings.SetVerbosity(Verbosity.Verbose);
 	});
 
 	// Use MSBuild
